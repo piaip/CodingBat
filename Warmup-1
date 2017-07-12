@@ -172,3 +172,37 @@ public int max1020(int a, int b) {
   if(min >= 10 && min <= 20) return min;
   return 0;
 }
+
+//Warmup-1 > stringE
+public boolean stringE(String str) {
+ int count = 0;
+ for(int i = 0; i < str.length(); i++){
+   if(str.substring(i, i+1).equals("e")) count += 1;
+ }
+ return (count >= 1 && count <= 3);
+}
+
+//Warmup-1 > lastDigit
+public boolean lastDigit(int a, int b) {
+  return (a % 10 == b % 10);
+}
+
+//Warmup-1 > endUp 
+public String endUp(String str) {
+  int len = str.length();
+  if(len >= 3){
+    return str.substring(0, len-3) + str.substring(len-3).toUpperCase();
+  }else{
+    return str.toUpperCase();
+  }
+}
+
+//Warmup-1 > everyNth 
+public String everyNth(String str, int n) {
+  String temp = "";
+  for(int i=0; i<str.length(); i+=n){
+    temp += str.substring(i, i+1);
+  }
+  return temp;
+}
+
