@@ -118,3 +118,47 @@ public String delDel(String str) {
   return str;  
 }
 
+//Warmup-1 > mixStart
+public boolean mixStart(String str) {
+  if(str.length() < 3) return false;
+  return str.substring(1, 3).equals("ix");
+}
+
+//Warmup-1 > startOz 
+public String startOz(String str) {
+  String temp = "";
+  int len = str.length();
+  if(len >= 1 && str.charAt(0) == 'o') temp += str.charAt(0);
+  if(len >= 2 && str.charAt(1) == 'z') temp += str.charAt(1);
+  return temp;
+}
+
+//Warmup-1 > intMax
+public int intMax(int a, int b, int c) {
+  int max = a;
+  if(b > max) max = b;
+  if(c > max) max = c;
+  return max;
+}
+
+//Warmup-1 > close10
+public int close10(int a, int b) {
+  int tempa;
+  int tempb;
+  tempa = Math.abs(10 - a);
+  tempb = Math.abs(10 - b);
+  if(tempa < tempb) return a;
+  if(tempa > tempb) return b;
+  return 0;
+}
+
+//Warmup-1 > in3050 
+public boolean in3050(int a, int b) {
+  if(a >= 30 && a <= 40 && b >= 30 && b <= 40){ 
+    return true;
+  }else if(a >= 40 && a <= 50 && b >= 40 && b <= 50){
+    return true;
+  }
+  return false;
+}
+
