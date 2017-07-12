@@ -15,3 +15,23 @@ public String notString(String str) {
     return "not " + str;
   }
 }
+
+//Warmup-1 > missingChar 
+public String missingChar(String str, int n) {
+  return str.substring(0, n) + str.substring(n+1, str.length());
+}
+
+//Warmup-1 > frontBack 
+public String frontBack(String str) {
+  if(str.length()<2) return str;
+  
+  String first="";
+  String mid=""; 
+  String last="";
+  
+  last = str.substring(0,1);
+  mid = str.substring(1, str.length()-1);
+  first = str.substring(str.length()-1);
+  
+  return first + mid + last;
+}
