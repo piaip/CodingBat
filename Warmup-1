@@ -48,3 +48,73 @@ public String front3(String str) {
   return temp + temp + temp;
 }
 
+//Warmup-1 > backAround
+public String backAround(String str) {
+  String temp="";
+  int len = str.length();
+  if(len == 0) return str;
+  temp = str.substring(len-1);
+  return temp + str + temp;
+}
+
+//Warmup-1 > or35 
+public boolean or35(int n) {
+  return (n % 3 == 0) || (n % 5 == 0);
+}
+
+//Warmup-1 > front22 
+public String front22(String str) {
+  int len = str.length();
+  String temp = "";
+  if(len == 0) return str;
+  if(len >= 2){
+    temp = str.substring(0, 2);
+  }else{
+    temp = str.substring(0, 1);
+  }  
+  return temp + str + temp;
+}
+
+//Warmup-1 > startHi 
+public boolean startHi(String str) {
+  if(str.length() < 2) return false;
+  if(str.substring(0, 2).equals("hi")) return true;
+  return false;
+}
+
+//Warmup-1 > icyHot 
+public boolean icyHot(int temp1, int temp2) {
+  return ((temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0));
+}
+
+//Warmup-1 > in1020
+public boolean in1020(int a, int b) {
+  return ((a >= 10 && a <= 20) || (b >= 10 && b <= 20));
+}
+
+//Warmup-1 > hasTeen 
+public boolean hasTeen(int a, int b, int c) {
+  return (a>=13 && a<=19) || (b>=13 && b<=19) | (c>=13 && c<=19);
+}
+
+//Warmup-1 > loneTeen 
+public boolean loneTeen(int a, int b) {
+  if ((a >= 13 && a <= 19) && (b >= 13 && b <=19)) {
+    return false;
+  }
+  return ((a >= 13 && a <= 19) || (b >= 13 && b <=19));
+}
+
+//Warmup-1 > delDel 
+public String delDel(String str) {
+  if (str.length() <= 3)  return str;
+  
+  if(str.substring(1,4).equals("del")) {
+    StringBuilder sb = new StringBuilder(str);
+    sb.replace(1,4,"");
+
+    return sb.toString();
+  }
+  return str;  
+}
+
