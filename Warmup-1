@@ -35,3 +35,16 @@ public String frontBack(String str) {
   
   return first + mid + last;
 }
+
+//Warmup-1 > front3 
+public String front3(String str) {
+  int len = str.length();
+  String temp = "";
+  if(len >= 3){
+    temp = str.substring(0, 3);
+  }else{
+    temp = str;
+  }
+  return temp + temp + temp;
+}
+
