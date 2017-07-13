@@ -112,3 +112,31 @@ public String stringX(String str) {
   }
   return first + temp + last;
 }
+
+//Warmup-2 > altPairs 
+public String altPairs(String str) {
+  String temp = "";
+  int len = str.length();
+  //if(len <= 2) return str;
+  for(int i=0; i<len; i+=4){
+    temp += str.substring(i, Math.min(len, i + 2));
+  }
+  return temp;
+}
+
+//Warmup-2 > stringYak 
+public String stringYak(String str) {
+  str = str.replace("yak", "");
+  return str;
+}
+
+//Warmup-2 > array667
+public int array667(int[] nums) {
+  int count = 0;
+  for(int i=0; i<nums.length-1; i++){
+    if(nums[i] == 6 && (nums[i+1] == 6 || nums[i+1] == 7)) count += 1;
+  }
+  return count;
+}
+
+
