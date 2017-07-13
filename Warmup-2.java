@@ -139,4 +139,10 @@ public int array667(int[] nums) {
   return count;
 }
 
-
+//Warmup-2 > noTriples
+public boolean noTriples(int[] nums) {
+  for(int i=0; i<nums.length-2; i++){
+    if(nums[i] == nums[i+1] && nums[i+1] == nums[i+2]) return false;
+  }
+  return true;
+}
