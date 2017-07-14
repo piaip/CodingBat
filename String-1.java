@@ -233,4 +233,16 @@ public String startWord(String str, String word) {
     return "";
 }
   
+//String-1 > withoutX 
+public String withoutX(String str) {
+  String temp = str;
+  int len = str.length();
+  if(len >= 1 && str.substring(0, 1).equals("x")) 
+    temp = str.substring(1);
+  int lent = temp.length();  
+  if(lent >= 1 && temp.substring(lent-1).equals("x")) 
+    temp = temp.substring(0, lent-1);
+  return temp;
+}
+  
   
