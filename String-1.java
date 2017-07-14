@@ -188,3 +188,31 @@ public boolean frontAgain(String str) {
   return false;
 }
   
+//String-1 > minCat 
+public String minCat(String a, String b) {
+  int lena = a.length();
+  int lenb = b.length();
+  if(lena == 0 || lenb == 0) return "";
+  if(lena >= lenb) return a.substring(lena-lenb) + b;
+  if(lenb > lena) return a + b.substring(lenb-lena);
+  return a + b;
+}
+  
+//String-1 > extraFront 
+public String extraFront(String str) {
+  if(str.length() >= 2){
+    return str.substring(0, 2) + str.substring(0, 2) + str.substring(0, 2);
+  }else{
+    return str.substring(0) + str.substring(0) + str.substring(0);
+  }
+}
+  
+//String-1 > without2
+public String without2(String str) {
+  int len = str.length(); 
+  if(len >= 2 && str.substring(0,2).equals(str.substring(len-2))) 
+    return str.substring(2);
+  return str;
+}
+
+  
