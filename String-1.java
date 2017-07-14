@@ -122,3 +122,69 @@ public String middleThree(String str) {
   return str.substring(i-1, i+2);
 }
 
+//String-1 > hasBad 
+public boolean hasBad(String str) {
+  int len = str.length();
+  if(len >= 3) {
+    if(str.substring(0,3).equals("bad")) return true;
+  }
+  if(len >= 4 ){
+    if(str.substring(1,4).equals("bad")) return true;
+  }
+  return false;
+
+ //String-1 > atFirst
+ public String atFirst(String str) {
+  String temp = "";
+  int len = str.length();
+  if(len >= 2) temp = str.substring(0,2);
+  if(len == 0) temp = "@@";
+  if(len == 1) temp = str + "@";
+  return temp;
+}
+  
+//String-1 > lastChars 
+public String lastChars(String a, String b) {
+  int lena = a.length();
+  int lenb = b.length();
+  String tempa = "@";
+  String tempb = "@";
+  if(lena != 0) tempa = a.substring(0, 1);
+  if(lenb != 0) tempb = b.substring(lenb - 1);
+  return tempa + tempb;
+}
+  
+ //String-1 > conCat 
+ public String conCat(String a, String b) {
+  int lena = a.length();
+  if(lena > 0 && b.length() > 0 && a.substring(lena-1).equals(b.substring(0, 1)))
+    return a.substring(0, lena-1) + b;
+  return a + b;  
+}
+  
+//String-1 > lastTwo
+public String lastTwo(String str) {
+  int len = str.length();
+  if(len < 2) return str;
+  String temp = "";
+  if(len > 2) temp = str.substring(0, len-2);
+  return temp + str.charAt(len-1) + str.charAt(len-2);
+}
+
+//String-1 > seeColor 
+public String seeColor(String str) {
+  int len = str.length();
+  if(len >= 3 && str.substring(0,3).equals("red")) return "red";
+  if(len >= 4 && str.substring(0,4).equals("blue")) return "blue";
+  return "";
+}
+  
+//String-1 > frontAgain
+public boolean frontAgain(String str) {
+  int len = str.length();
+  if(len >= 2){
+    if(str.substring(0, 2).equals(str.substring(len-2))) return true;
+  }
+  return false;
+}
+  
