@@ -245,4 +245,19 @@ public String withoutX(String str) {
   return temp;
 }
   
-  
+//String-1 > withoutX2 
+public String withoutX2(String str) {
+  int len = str.length();
+  if(len == 1 && str.charAt(0) == 'x') return "";
+  if(len >= 2){
+    if(str.charAt(0) == 'x' && str.charAt(1) == 'x') 
+      return str.substring(2);
+    if(str.charAt(0) == 'x')
+      return str.substring(1);      
+    if(str.charAt(1) == 'x')
+      return str.charAt(0) + str.substring(2);
+  }
+  return str;
+}
+
+
