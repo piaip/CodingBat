@@ -32,3 +32,47 @@ public boolean catDog(String str) {
   }
   return countc == countd;
 }
+
+//String-2 > countCode
+public int countCode(String str) {
+  int count = 0; 
+  for(int i = 0; i < str.length()-3; i++){ 
+    if( ((str.substring(i,i+2)) + str.substring(i+3, i+4)).equals("coe") ) 
+      count++;
+  }
+  return count;
+}
+
+//String-2 > endOther
+public boolean endOther(String a, String b) { 
+  if(b.length() > a.length()){
+    String temp = a;
+    a = b;
+    b = temp;
+  }
+  return a.substring(a.length()-b.length()).toLowerCase().equals(b.toLowerCase());
+}
+
+//String-2 > xyzThere 
+public boolean xyzThere(String str) {
+  int len = str.length();
+  if(len >= 3 && str.substring(0,3).equals("xyz"))
+    return true;
+  for(int i = 1; i < len-2; i++){
+    if(str.charAt(i-1) != '.' && str.substring(i, i+3).equals("xyz"))
+      return true;
+  }  
+  return false;
+}
+
+//String-2 > bobThere
+public boolean bobThere(String str) {
+  if(str.length() >= 3){
+    for(int i=0; i<str.length()-2; i++){
+      if( (str.substring(i, i+1) + str.substring(i+2, i+3)).equals("bb") )
+        return true;
+    }
+  }
+  return false;
+}
+
