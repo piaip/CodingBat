@@ -7,3 +7,20 @@ public boolean cigarParty(int cigars, boolean isWeekend) {
   }
   return false;
 }
+
+//Logic-1 > dateFashion
+public int dateFashion(int you, int date) {
+  if(you <= 2 || date <= 2) return 0;
+  if(you >= 8 || date >= 8) return 2;
+  return 1;
+}
+
+//Logic-1 > squirrelPlay
+public boolean squirrelPlay(int temp, boolean isSummer) {
+  if(isSummer){
+    if(temp >= 60 && temp <= 100) return true;
+  }else{
+    if(temp >= 60 && temp <= 90) return true;
+  }
+  return false;
+}
