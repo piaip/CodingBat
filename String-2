@@ -90,3 +90,66 @@ public boolean xyBalance(String str) {
     return true;
 }
 
+//String-2 > mixString 
+public String mixString(String a, String b) {
+  int lena = a.length();
+  int lenb = b.length();
+  char[] myarr;
+  int count = 0;
+  String last = "";
+  if(lena <= lenb){
+    myarr = new char[2*lena];
+    last = b.substring(lena);
+  }else{
+    myarr = new char[2*lenb];
+    last = a.substring(lenb);
+  }
+  for(int i=0; i<myarr.length/2; i++){
+    myarr[count] = a.charAt(i);
+    count++;
+    myarr[count] = b.charAt(i);
+    count++;
+  }
+  return new String(myarr) + last;
+}
+
+//String-2 > repeatEnd
+public String repeatEnd(String str, int n) {
+  String temp = ""; 
+  temp = str.substring(str.length()-n);
+  int i = 0;
+  String result = "";
+  while(i < n){
+    result += temp;
+    i++;
+  }
+  return result;
+}
+
+//String-2 > repeatFront
+public String repeatFront(String str, int n) { 
+  String result = "";
+  for(int i = n; i > 0; i--){
+    result += str.substring(0, i);
+  }
+  return result;
+}
+
+//String-2 > repeatSeparator
+public String repeatSeparator(String word, String sep, int count) {
+  String result = "";
+  for(int i=1; i <= count; i++){
+    result += word;
+    if(i != count)
+      result += sep;
+  }
+  return result;
+}
+
+//String-2 > prefixAgain
+public boolean prefixAgain(String str, int n) {
+ for(int i = n; i <= str.length() - n; i++){
+    if( str.substring(i, i+n).equals(str.substring(0, n)) ) return true;
+  }
+  return false;
+}
