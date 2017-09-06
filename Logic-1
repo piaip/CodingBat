@@ -27,7 +27,7 @@ public boolean squirrelPlay(int temp, boolean isSummer) {
 
 //Logic-1 > caughtSpeeding 
 public int caughtSpeeding(int speed, boolean isBirthday) {
-  Integer ints = 0;
+  int ints = 0;
   if(isBirthday) speed = speed - 5;
   if(speed <= 60)
     ints = 0;
